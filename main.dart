@@ -4,7 +4,7 @@ void main() {
   runApp(const PremiumCoffeeApp());
 }
 
-// نموذج بيانات المنتج
+
 class Coffee {
   final String name;
   final String description;
@@ -32,7 +32,7 @@ class PremiumCoffeeApp extends StatelessWidget {
         brightness: Brightness.dark,
         scaffoldBackgroundColor: const Color(0xFF121212),
         colorScheme: const ColorScheme.dark(
-          primary: Color(0xFFD4A373), // لون ذهبي مائل للبني الفاتح للتميز
+          primary: Color(0xFFD4A373),
           secondary: Color(0xFFFAEDCD),
           surface: Color(0xFF1E1E1E),
         ),
@@ -54,9 +54,6 @@ class PremiumCoffeeApp extends StatelessWidget {
   }
 }
 
-// ---------------------------------------------------------------------------
-// 1. شاشة تسجيل الدخول المتكاملة
-// ---------------------------------------------------------------------------
 class FullLoginScreen extends StatefulWidget {
   const FullLoginScreen({super.key});
 
@@ -109,7 +106,7 @@ class _FullLoginScreenState extends State<FullLoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    // الشعار
+            
                     const Icon(Icons.coffee_rounded, size: 80, color: Color(0xFFD4A373)),
                     const SizedBox(height: 20),
                     const Text(
@@ -351,9 +348,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// ---------------------------------------------------------------------------
-// 3. شاشة التفاصيل العامة
-// ---------------------------------------------------------------------------
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
@@ -472,9 +466,6 @@ class MenuScreen extends StatelessWidget {
   }
 }
 
-// ---------------------------------------------------------------------------
-// 5. شاشة تفاصيل المنتج
-// ---------------------------------------------------------------------------
 class CoffeeDetailScreen extends StatelessWidget {
   final Coffee coffee;
 
