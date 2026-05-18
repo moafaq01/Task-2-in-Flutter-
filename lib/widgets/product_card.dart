@@ -19,13 +19,16 @@ class ProductCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: const Color(0xFF1E293B),
         borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.black.withOpacity(0.05), width: 1),
+        border: Border.all(
+          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5), 
+          width: 1,
+        ),
         boxShadow: [
           BoxShadow(
-            color: Theme.of(context).primaryColor.withOpacity(0.15),
-            blurRadius: 10,
+            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
+            blurRadius: 15,
             spreadRadius: 1,
             offset: const Offset(0, 4),
           ),
@@ -77,7 +80,7 @@ class ProductCard extends StatelessWidget {
                         child: Container(
                           padding: const EdgeInsets.all(6),
                           decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.3),
+                            color: Colors.black.withValues(alpha: 0.3),
                             shape: BoxShape.circle,
                           ),
                           child: Icon(
@@ -144,7 +147,7 @@ class ProductCard extends StatelessWidget {
                 Text(
                   product.author,
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 70, 107, 131),
+                    color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                     fontSize: 11,
                   ),
                   maxLines: 1,
@@ -175,21 +178,22 @@ class ProductCard extends StatelessWidget {
                         );
                       },
                       child: Container(
-                        padding: const EdgeInsets.all(4),
+                        padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
-                          color: Theme.of(
-                            context,
-                          ).primaryColor.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(
-                            color: Theme.of(context).primaryColor,
-                            width: 1,
-                          ),
+                          color: Theme.of(context).colorScheme.primary,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.4),
+                              blurRadius: 8,
+                              offset: const Offset(0, 2),
+                            ),
+                          ],
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.add_shopping_cart_rounded,
-                          size: 18,
-                          color: Theme.of(context).primaryColor,
+                          size: 20,
+                          color: Color(0xFF0F172A), // Dark color for contrast
                         ),
                       ),
                     ),

@@ -35,9 +35,10 @@ class _MainScreenState extends State<MainScreen> {
       body: _screens[_selectedIndex],
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
+          color: const Color(0xFF1E293B),
           boxShadow: [
             BoxShadow(
-              color: Theme.of(context).primaryColor.withOpacity(0.1),
+              color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
               blurRadius: 20,
               offset: const Offset(0, -5),
             ),
@@ -47,10 +48,11 @@ class _MainScreenState extends State<MainScreen> {
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.white,
+          backgroundColor: const Color(0xFF1E293B),
           selectedItemColor: Theme.of(context).colorScheme.primary,
-          unselectedItemColor: Colors.grey[400],
+          unselectedItemColor: Colors.grey[500],
           showUnselectedLabels: true,
+          elevation: 0,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.category_rounded), label: 'Categories'),
